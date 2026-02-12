@@ -1,0 +1,48 @@
+:root{
+  --bg1:#ff9a9e;
+  --bg2:#fecfef;
+  --card:#ffffffee;
+  --accent:#ff6b81;
+  --muted:#6b6b6b;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Poppins",system-ui,Segoe UI,Arial;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+.scene{width:100%;max-width:900px;position:relative}
+.card{
+  background:var(--card);
+  border-radius:20px;
+  padding:42px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.12);
+  text-align:center;
+}
+.title{font-family:"Sacramento",cursive;font-size:48px;margin:0;color:var(--accent)}
+.subtitle{margin:8px 0 22px;color:var(--muted)}
+.buttons{display:flex;gap:18px;justify-content:center;margin-top:6px}
+.btn{cursor:pointer;border:0;padding:14px 26px;border-radius:12px;font-weight:600;transition:transform .18s ease, box-shadow .18s;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+.btn:active{transform:translateY(2px)}
+.yes{background:linear-gradient(90deg,#ff9a9e,#ff6b81);color:white}
+.no{background:linear-gradient(90deg,#fff1f6,#ffeef3);color:#b32b4a}
+.result{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,0.95);padding:28px;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,0.12);width:80%;max-width:560px}
+.result.hidden{display:none}
+.hidden{display:none}
+.no-msg{position:fixed;padding:8px 12px;background:rgba(0,0,0,0.8);color:#fff;border-radius:10px;font-weight:600;z-index:9999;transform:translateY(-6px);pointer-events:none;opacity:0;transition:opacity .25s,transform .25s}
+.no-msg.show{opacity:1;transform:translateY(0)}
+.cat{max-width:100%;border-radius:12px;display:block;margin:8px auto}
+
+/* playful floating hearts */
+.heart{position:absolute;width:18px;height:18px;background:var(--accent);transform:rotate(45deg);border-radius:4px;left:0;top:0;opacity:0.9}
+
+@media (max-width:520px){
+  .title{font-size:36px}
+  .card{padding:26px}
+  .btn{padding:10px 14px}
+}

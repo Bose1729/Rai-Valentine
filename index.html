@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Will you be my Valentine?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene">
+    <div class="card">
+      <h1 class="title">Will you be my Valentine?</h1>
+      <p class="subtitle">(one simple question)</p>
+
+      <div class="buttons">
+        <button id="yesBtn" class="btn yes">Yes 💖</button>
+        <button id="noBtn" class="btn no">No 😿</button>
+      </div>
+    </div>
+
+    <div id="result" class="result hidden" role="status" aria-live="polite">
+      <!-- Show only the local GIF when Yes is clicked. Place `dudu.gif` next to index.html -->
+      <img id="duduGif" class="cat hidden" src="dudu.gif" alt="dudu gif">
+      <h2>thank you jaanu</h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
